@@ -135,7 +135,7 @@ export async function sendProposal(data: ProposalData): Promise<SendProposalResu
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Seokane Proposal <onboarding@resend.dev>",
+        from: "Seokane Proposal <noreply@maruonline.com>",
         to: [ADMIN_EMAIL],
         subject: "New Proposal Discovery: Seokane Inc.",
         html: emailContent,
