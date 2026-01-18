@@ -72,24 +72,25 @@ export function ProposalActions({ proposalData }: ProposalActionsProps) {
         return (
           <>
             <Send className="w-5 h-5 mr-2" />
-            Generate & Send Proposal
+            Generate and Send Response
           </>
         );
     }
   };
 
   return (
-    <section id="actions" className="py-20 px-4">
+    <section id="actions" className="py-20 px-4 bg-white">
       <div className="max-w-3xl mx-auto text-center">
-        <div className="glass-card rounded-2xl p-8 md:p-12">
-          <div className="w-16 h-16 rounded-full bg-[#F58220]/10 flex items-center justify-center mx-auto mb-6">
-            <FileText className="w-8 h-8 text-[#F58220]" />
+        {/* Dark Card for CTA */}
+        <div className="dark-card p-8 md:p-12">
+          <div className="w-16 h-16 rounded-full bg-orange-500/20 flex items-center justify-center mx-auto mb-6">
+            <FileText className="w-8 h-8 text-orange-400" />
           </div>
           
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Ready to Submit Your Discovery?
           </h2>
-          <p className="text-white/60 mb-8 max-w-xl mx-auto">
+          <p className="text-slate-400 mb-8 max-w-xl mx-auto">
             Once you've answered the discovery questions above, click the button below to generate 
             your personalized proposal and send it to our team for review.
           </p>
@@ -101,10 +102,10 @@ export function ProposalActions({ proposalData }: ProposalActionsProps) {
             className={`
               px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300
               ${status === "success" 
-                ? "bg-green-600 hover:bg-green-700" 
+                ? "bg-green-500 hover:bg-green-600" 
                 : status === "error"
-                  ? "bg-red-600 hover:bg-red-700"
-                  : "bg-[#F58220] hover:bg-[#F58220]/90 orange-glow"
+                  ? "bg-red-500 hover:bg-red-600"
+                  : "bg-white text-slate-900 hover:bg-slate-100"
               }
             `}
           >
@@ -112,16 +113,16 @@ export function ProposalActions({ proposalData }: ProposalActionsProps) {
           </Button>
 
           {status === "success" && (
-            <div className="mt-6 p-4 rounded-lg bg-green-500/10 border border-green-500/20">
-              <p className="text-green-400 font-medium">
-                🎉 Proposal sent! We will be in touch shortly.
+            <div className="mt-6 p-4 rounded-lg bg-green-500/20 border border-green-500/30">
+              <p className="text-green-300 font-medium">
+                Thank you for your response. A detailed Build Plan for your new Site will be prepared and sent soon.
               </p>
             </div>
           )}
 
           {status === "error" && errorMessage && (
-            <div className="mt-6 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
-              <p className="text-red-400 font-medium">{errorMessage}</p>
+            <div className="mt-6 p-4 rounded-lg bg-red-500/20 border border-red-500/30">
+              <p className="text-red-300 font-medium">{errorMessage}</p>
             </div>
           )}
         </div>

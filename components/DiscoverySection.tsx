@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -78,16 +77,16 @@ export function DiscoverySection({ answers, onAnswersChange }: DiscoverySectionP
   };
 
   return (
-    <section id="discovery" className="py-20 px-4">
+    <section id="discovery" className="py-20 px-4 bg-[#F8FAFC]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-[#F58220]/10 text-[#F58220] border border-[#F58220]/20 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-orange-50 text-[#F58220] border border-orange-200 mb-4">
             Discovery Phase
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Help Us Understand <span className="gradient-text">Your Goals</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Help Us Understand <span className="text-slate-400">Your Goals</span>
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             Please answer the following questions to help us tailor the proposal to your specific needs. 
             Your responses will be included in the final proposal document.
           </p>
@@ -100,16 +99,16 @@ export function DiscoverySection({ answers, onAnswersChange }: DiscoverySectionP
               <AccordionItem
                 key={item.id}
                 value={item.id}
-                className="glass-card rounded-xl border-white/10 overflow-hidden"
+                className="bg-white rounded-xl border border-slate-200 overflow-hidden"
               >
-                <AccordionTrigger className="px-6 py-5 hover:no-underline hover:bg-white/5 transition-colors">
+                <AccordionTrigger className="px-6 py-5 hover:no-underline hover:bg-slate-50 transition-colors">
                   <div className="flex items-center gap-4 text-left">
-                    <div className="w-10 h-10 rounded-lg bg-[#F58220]/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-[#F58220]" />
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-slate-700" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                      <p className="text-sm text-white/50 mt-0.5">{item.question}</p>
+                      <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                      <p className="text-sm text-slate-500 mt-0.5">{item.question}</p>
                     </div>
                   </div>
                 </AccordionTrigger>
@@ -118,7 +117,7 @@ export function DiscoverySection({ answers, onAnswersChange }: DiscoverySectionP
                     value={answers[item.id as keyof DiscoveryAnswers]}
                     onChange={(e) => handleChange(item.id as keyof DiscoveryAnswers, e.target.value)}
                     placeholder={item.placeholder}
-                    className="min-h-[120px] bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-[#F58220]/50 focus:ring-[#F58220]/20 resize-none"
+                    className="min-h-[120px] bg-slate-50 border-slate-200 text-slate-900 placeholder:text-slate-400 focus:border-slate-400 focus:ring-slate-400/20 resize-none"
                   />
                 </AccordionContent>
               </AccordionItem>

@@ -45,46 +45,42 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  
-  /* Seokane Brand Colors */
-  --color-brand-midnight: #000133;
-  --color-brand-orange: #F58220;
-  --color-brand-orange-light: #F5921F;
 }
 
+/* Digivation-style Light Theme */
 :root {
-  --radius: 0.625rem;
-  --background: #000133;
-  --foreground: #ffffff;
-  --card: rgba(255, 255, 255, 0.05);
-  --card-foreground: #ffffff;
-  --popover: #0a0a33;
-  --popover-foreground: #ffffff;
-  --primary: #F58220;
-  --primary-foreground: #ffffff;
-  --secondary: rgba(255, 255, 255, 0.1);
-  --secondary-foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.1);
-  --muted-foreground: rgba(255, 255, 255, 0.6);
+  --radius: 0.75rem;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
+  --primary: #0F172A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #0F172A;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
   --accent: #F58220;
-  --accent-foreground: #ffffff;
+  --accent-foreground: #FFFFFF;
   --destructive: #dc2626;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: #F58220;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #0F172A;
   --chart-1: #F58220;
   --chart-2: #3b82f6;
-  --chart-3: #10b981;
+  --chart-3: #8b5cf6;
   --chart-4: #f59e0b;
   --chart-5: #ef4444;
-  --sidebar: #0a0a33;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #F58220;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: rgba(245, 130, 32, 0.2);
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #F58220;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0F172A;
+  --sidebar-primary: #0F172A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F1F5F9;
+  --sidebar-accent-foreground: #0F172A;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #0F172A;
 }
 
 @layer base {
@@ -97,32 +93,54 @@
   }
 }
 
-/* Custom Glassmorphism */
+/* Light Card */
+.light-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+}
+
+/* Dark Card - Slate 950 */
+.dark-card {
+  background: #020617;
+  border: 1px solid #1E293B;
+  border-radius: 16px;
+  color: #FFFFFF;
+}
+
+.dark-card h3,
+.dark-card h4 {
+  color: #FFFFFF;
+}
+
+.dark-card p {
+  color: #CBD5E1;
+}
+
+/* Glass Navigation */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
 }
 
+/* Glass Card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, #F58220 0%, #F5921F 50%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Orange Glow */
-.orange-glow {
-  box-shadow: 0 0 40px rgba(245, 130, 32, 0.3);
+/* Emerald accent bullet */
+.accent-bullet::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  margin-right: 12px;
 }
 
 /* Subtle animations */
