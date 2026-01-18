@@ -35,7 +35,7 @@ export default function ProposalPage() {
         <div className="max-w-6xl mx-auto">
           <div className="glass rounded-full px-6 py-3 flex items-center justify-between shadow-sm">
             <div className="flex items-center gap-2">
-              <span className="text-slate-500 text-sm font-medium">Digital Proposal</span>
+              <span className="text-slate-500 text-sm font-medium">Digital Transformation Proposal</span>
             </div>
             
             {/* Pill Navigation */}
